@@ -1,4 +1,3 @@
-import Button from "./components/button";
 import { Input } from "./components/input";
 import Router from "./routes";
 import { GlobalStyle } from "./styles/globalstyles";
