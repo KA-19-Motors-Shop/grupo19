@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         font-family: 'Inter', sans-serif;
         font-size: 16px;
@@ -17,6 +20,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     input, input::placeholder, label,textarea{
         font-family: 'Inter', sans-serif;
+    }
+    figcaption{
+        display: none;
     }
     label{
         font-weight: 500;
