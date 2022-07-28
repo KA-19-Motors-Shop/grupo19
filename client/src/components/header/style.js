@@ -6,12 +6,12 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(222, 226, 230, 1);
+  background-color: var(--grey6);
 `;
-export const HeaderLogo = styled.img`
+export const HeaderLogo = styled.div`
+  display: flex;
   width: 153px;
   height: 23px;
-  padding: 20px 60px;
 `;
 export const HeaderDivButtons = styled.div`
   display: flex;
@@ -19,9 +19,9 @@ export const HeaderDivButtons = styled.div`
 
 export const HeaderButtons = styled.button`
   padding: 10px;
-  background-color: rgba(222, 226, 230, 1);
+  background-color: var(--grey6);
   border: none;
-  color: rgba(73, 80, 87, 1);
+  color: var(--grey2);
 `;
 export const HeaderDivLogin = styled.div`
   width: 200px;

@@ -1,12 +1,22 @@
 import Header from "../../components/header";
-import { SecundaryHeader } from "./style";
+import Button from "../../components/button";
+import { ButtonHeader, H2Header, PHeader, SecundaryHeader } from "./style";
 const PageProducts = () => {
   return (
     <>
       <Header />
       <SecundaryHeader>
-        <h1>Velocidade e experiencia em um lugar feito para voce</h1>
-        <p>Um ambiente feito para voce explorar o seu melhor</p>
+        <H2Header>
+          <h2>Velocidade e experiência em um lugar feito para você</h2>
+        </H2Header>
+        <PHeader>
+          <p>Um ambiente feito para você explorar o seu melhor</p>
+        </PHeader>
+        <ButtonHeader>
+          <Button className="brand1">Leilao</Button>
+          <Button className="brand1">Carros</Button>
+          <Button className="brand1">Motos</Button>
+        </ButtonHeader>
       </SecundaryHeader>
     </>
   );
