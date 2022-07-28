@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         font-family: 'Inter', sans-serif;
     }
-    input, input::placeholder, label{
+    input, input::placeholder, label,textarea{
         font-family: 'Inter', sans-serif;
     }
     label{
@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 14px;
         color: var(--grey2);
     }
-    input::placeholder{
+    input::placeholder,textarea::placeholder{
         font-weight: 400;
         font-size: 16px;
         color: var(--grey2);
