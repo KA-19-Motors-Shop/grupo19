@@ -15,6 +15,9 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         background-color:var(--grey8);
     }
+    p{
+        font-family: 'Inter', sans-serif;
+    }
     button{
         cursor: pointer;
         font-family: 'Inter', sans-serif;
@@ -64,6 +67,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         font-size: 20px;
     }
+
     h7{
         font-weight: 600;
         font-size: 16px;
