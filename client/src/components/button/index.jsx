@@ -1,11 +1,11 @@
 import { ButtonContainer } from "./style"
 
-const Button = ({children, className='default', isBig=false, fullWidth, type,...rest})=>{
+const Button = ({children, className='default', isBig=false, fullWidth, type, style, ...rest})=>{
 
 
     return(
-        <ButtonContainer  isBig={isBig} fullWidth={fullWidth} {...rest} >
-            <button type={type} className={className}>
+        <ButtonContainer style={style}  isBig={isBig} fullWidth={fullWidth} >
+            <button type={type} className={className}  {...rest}>
             {children}
             </button>
         </ButtonContainer>

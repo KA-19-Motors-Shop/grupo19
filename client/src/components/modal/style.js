@@ -12,14 +12,33 @@ export const ModalContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 80px 19px;
+    overflow: auto;
+    
     .modal-box{
+        max-height: 100%;
         padding: 0 24px 32px;
         max-width: 520px;
         width: 100%;
         background-color: var(--whiteFixed);
+        overflow: auto;
         border-radius: 8px;
+        position: relative;
+        ::-webkit-scrollbar{
+            width: 3px;
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: var(--brand2);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-button{
+            height: 8px;
+        }
     }
     .modal-header{
+        background-color: var(--whiteFixed);
+        position: sticky;
+        top: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -40,6 +59,8 @@ export const ModalContainer = styled.div`
         }
     }
     .modal-body{
+        height: 100%;
+        background-color: var(--whiteFixed);
 
     }
 `
