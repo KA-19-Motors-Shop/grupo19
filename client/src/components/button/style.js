@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
     display: inline-block;
+    width: ${(props)=>props.fullWidth===true ? '100%' : 'auto'};
     button{
         border-radius: 4px;
         padding: ${(props)=>props.isBig===true ? '12px 28px 12px 28px':'12px 20px 12px 20px'};
