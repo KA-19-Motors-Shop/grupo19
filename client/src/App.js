@@ -12,7 +12,7 @@ function App() {
       <GlobalStyle/>
       <Router/>
 
-
+{/* 
       <Modal headerTitle={"Modal teste"} HeaderBody={
       <form>
         <span>Cadastro</span>
@@ -27,7 +27,7 @@ function App() {
           <Button className="brand1">Cadastrar</Button>
         </div>
       </form>
-      } />
+      } /> */}
 
 
       <Input label={'label'} placeholder={'placeholder'} name={'label'} type={'password'}/>
