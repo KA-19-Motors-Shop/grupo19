@@ -4,11 +4,11 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
     height: 140px;
     background-color: var(--grey0);
-    padding: 0 59px;
     color: var(--whiteFixed);
     font-size: 14px;
     font-weight: 400;
     .container{
+        padding: 0 59px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -32,6 +32,7 @@ export const FooterContainer = styled.footer`
         color: var(--whiteFixed);
         line-height: 24px;
         font-size: 14px;
+        text-align: center;
     }
     
     img{
