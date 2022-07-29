@@ -7,16 +7,23 @@ export const LoginContainer = styled.main`
     align-items: center;
     justify-content: center;
     padding: 52px 16px 71px;
+    background-color: var(--grey8);
     h5{
         font-weight: 500;
         line-height: 30px;
         margin: 0 0 13px;
+    }
+    button{
+        padding: 12px 0;
     }
     .login-box{
         max-width: 412px;
         border-radius: 4px;
         background-color: var(--whiteFixed);
         padding: 44px 49px 44px 48px;
+        @media (max-width: 500px) {
+            padding: 44px 28px;
+        }
     }
     span{
         display: block;
