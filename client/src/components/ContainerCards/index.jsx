@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Cards from "../card";
 import { Container, Main } from "./styled";
 
@@ -14,7 +13,7 @@ import car10 from "../../assets/car10.png";
 import car11 from "../../assets/car11.png";
 import car12 from "../../assets/car12.png";
 
-const ContainerCards = ({ typeCard }) => {
+const ContainerCards = ({ typeCard, arrayToRender}) => {
   const arrayCars = [
     {
       img: car1,
@@ -128,11 +127,9 @@ const ContainerCards = ({ typeCard }) => {
     },
   ];
 
-  const dataCars = arrayCars.map((item, index) => console.log(item.title));
-
   return (
     <Main>
-      <h2>{typeCard}</h2>
+      <h5>{typeCard}</h5>
       <Container>
         {arrayCars.map((item, index) => {
           return <Cards key={index} img={item.img} title={item.title} details={item.details} user={item.user} KM={item.KM} year={item.year} value={item.value}/>;

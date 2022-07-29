@@ -7,7 +7,7 @@ export const Card = styled.div`
 
   h3 {
     font-size: 16px;
-    color: #212529;
+    color: var(--grey1);
     margin: 16px 0px;
     font-family: "Lexend";
     text-overflow:ellipsis;
@@ -18,20 +18,20 @@ export const Card = styled.div`
   span {
     font-size: 14px;
     font-family: "Inter";
-    color: #495057;
+    color: var(--grey2);
   }
 `;
 
 export const BackGroundImg = styled.div`
-  background-color: #e9ecef;
+  background-color: var(--grey7);
   width: 280px;
   height: 152px;
   display: flex;
-  border: 2px solid #e9ecef;
+  border: 2px solid  var(--grey7);
   border-radius:4px;
 
   &:hover{
-    border: 2px solid #4529E6;
+    border: 2px solid var(--brand1);
   }
 
   img {
@@ -43,31 +43,6 @@ export const BackGroundImg = styled.div`
 `;
 
 
-
-export const DataUser = styled.div`
-  display: flex;
-  margin-top: 16px;
-  align-items: center;
-  margin-bottom: 16px;
-
-  div {
-    background-color: #4529e6;
-    border-radius: 150px;
-    width: 32px;
-    height: 32px;
-    color: #ffffff;
-    display: flex;
-    margin-right: 16px;
-
-    p {
-      margin: auto;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: "Inter";
-    }
-  }
-`;
-
 export const DataCar = styled.div`
   display: flex;
   align-items: center;
@@ -77,14 +52,14 @@ export const DataCar = styled.div`
     display: flex;
     width: 51px;
     height: 32px;
-    background-color: #edeafd;
+    background-color: var(--brand4);
     border-radius: 4px;
     margin-right: 10px;
 
     p {
       margin: auto;
       font-size: 14px;
-      color: #4529e6;
+      color: var(--brand1);
       font-weight: 500;
       font-family: "Inter";
     }
@@ -97,5 +72,5 @@ export const Value = styled.p`
   font-size:16px;
   font-family:'Lexend';
   font-weight:500;
-  color:#212529;
+  color:var(--grey1);
 `;

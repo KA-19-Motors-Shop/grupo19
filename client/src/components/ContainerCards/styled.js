@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  h2 {
+  h5 {
     text-align:start;
     padding:0 0 0 20px;
   }

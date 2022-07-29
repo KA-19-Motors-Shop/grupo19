@@ -1,5 +1,5 @@
-import CarImg from "../../assets/car1.png";
 import { Card, BackGroundImg, DataUser, DataCar, Value } from "./styled";
+import UserAdvertiser from "../userAdvertiser";
 
 const Cards = ({img, title, details, user, KM, year,value }) => {
   return (
@@ -13,15 +13,9 @@ const Cards = ({img, title, details, user, KM, year,value }) => {
         {details}
       </span>
 
-      <DataUser>
-        <div>
-          <p>SL</p>
-        </div>
-        <span>{user}</span>
-      </DataUser>
+      <UserAdvertiser userName={user} color='blue' />
 
       <DataCar>
-        
         <div><p>{KM}</p></div>
         <div><p>{year}</p></div>
         <Value>{value}</Value>
