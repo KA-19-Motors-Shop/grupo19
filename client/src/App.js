@@ -13,13 +13,13 @@ function App() {
       <Router/>
 
 
-      <Modal headerTitle={"Modal teste"} HeaderBody={
+      {/* <Modal headerTitle={"Modal teste"} HeaderBody={
       <form>
+        <span>Cadastro</span>
         <div style={{display:'flex', gap:'10px'}}>
           <Input label={'Nome'} placeholder={'Nome'} name={'Nome'} />
           <Input label={'Sobrenome'} placeholder={'Sobrenome'} name={'Sobrenome'} />
         </div>
-
         <Input label={'Email'} placeholder={'Email'} name={'Email'} />
         <Input label={'Password'} placeholder={'Password'} name={'Password'} type={'password'} />
         <div style={{textAlign:'end', margin:'20px 0 0 '}}>
@@ -27,10 +27,12 @@ function App() {
           <Button className="brand1">Cadastrar</Button>
         </div>
       </form>
-      } />
+      } /> */}
+
+
       <Input label={'label'} placeholder={'placeholder'} name={'label'} type={'password'}/>
       <Input label={'Textarea'} placeholder={'placeholder'} name={'label'} isTextarea={true}/>
-      <UserAdvertiser userName={'Gabriel   '} color='#f0f'/>
+      <UserAdvertiser userName={'Gabriel Rocha Souza'} color='#f0f'/>
       <Footer/>
     </>
   );

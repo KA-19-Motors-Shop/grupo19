@@ -4,6 +4,7 @@ export const UserAdvertiserContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
     .circle{
         border-radius: 50%;
         width: 32px;
