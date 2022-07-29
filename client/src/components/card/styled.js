@@ -19,6 +19,12 @@ export const Card = styled.div`
     font-size: 14px;
     font-family: "Inter";
     color: var(--grey2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 `;
 

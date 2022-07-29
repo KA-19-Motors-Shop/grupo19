@@ -42,6 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Lexend', sans-serif;
         font-style: normal;
         color: var(--grey1);
+        padding: 0;
     }
     h1{
         font-size: 44px;

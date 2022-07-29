@@ -12,6 +12,7 @@ import car9 from "../../assets/car9.png";
 import car10 from "../../assets/car10.png";
 import car11 from "../../assets/car11.png";
 import car12 from "../../assets/car12.png";
+import Button from "../../components/button";
 
 
 const PageProducts = () => {
@@ -133,8 +134,16 @@ const PageProducts = () => {
     <>
       <Header />
       <SecundaryHeader>
-        <h1>Velocidade e experiencia em um lugar feito para voce</h1>
+        <h1>Velocidade e experiência em um lugar feito para você</h1>
         <p>Um ambiente feito para voce explorar o seu melhor</p>
+
+        <div className="buttons">
+          <Button isBig={true} className="outlineLight">Leilão</Button>
+          <Button isBig={true} className="outlineLight">Carros</Button>
+          <Button isBig={true} className="outlineLight">Motos</Button>
+        </div>
+
+
       </SecundaryHeader>
 
       <ContainerCards arrayToRender={arrayCars} typeCard='Carros' />
