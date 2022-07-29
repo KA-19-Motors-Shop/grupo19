@@ -43,7 +43,7 @@ export const ButtonContainer = styled.div`
         background-color: var(--brand1);
         color: var(--whiteFixed);
         :hover{
-            background-color: var(--brand1);
+            background-color: var(--brand2);
         }
     }
     .brandOpacity{
