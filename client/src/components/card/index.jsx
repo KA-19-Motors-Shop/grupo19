@@ -5,7 +5,7 @@ const Cards = ({img, title, details, user, KM, year,value }) => {
   return (
     <Card>
       <BackGroundImg>
-        <img src={img} alt="" />
+        <img src={img} alt="" draggable={false} />
       </BackGroundImg>
 
       <h3>{title}</h3>
