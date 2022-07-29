@@ -9,7 +9,7 @@ export const InputContainer = styled.div`
         line-height: 17px;
         font-weight: 500;
         color: var(--grey1);
-        margin: 8px 0;
+        margin: 19px 0 8px;
     }
     textarea{
         width: 100%;
