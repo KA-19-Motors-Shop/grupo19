@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const ModalContainer = styled.div`
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: rgba(0, 0 ,0 ,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 19px;
+    padding: 80px 19px;
     .modal-box{
         padding: 0 24px 32px;
         max-width: 520px;

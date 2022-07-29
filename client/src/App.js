@@ -11,10 +11,8 @@ function App() {
     <>
       <GlobalStyle/>
       <Router/>
-      
-      <Input label={'label'} placeholder={'placeholder'} name={'label'} type={'password'}/>
-      <Input label={'Textarea'} placeholder={'placeholder'} name={'label'} isTextarea={true}/>
-      <UserAdvertiser userName={'Gabriel   '} color='#f0f'/>
+
+
       <Modal headerTitle={"Modal teste"} HeaderBody={
       <form>
         <div style={{display:'flex', gap:'10px'}}>
@@ -31,6 +29,9 @@ function App() {
         </div>
       </form>
       } />
+      <Input label={'label'} placeholder={'placeholder'} name={'label'} type={'password'}/>
+      <Input label={'Textarea'} placeholder={'placeholder'} name={'label'} isTextarea={true}/>
+      <UserAdvertiser userName={'Gabriel   '} color='#f0f'/>
       <Footer/>
     </>
   );
