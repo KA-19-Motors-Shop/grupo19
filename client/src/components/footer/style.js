@@ -15,6 +15,9 @@ export const FooterContainer = styled.footer`
         height: 100%;
         max-width: 1482px;
         margin: 0 auto;
+        @media (max-width: 630px) {
+            padding: 0;
+        }
     }
     @media (max-width:630px) {
         .container{
