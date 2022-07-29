@@ -4,11 +4,11 @@ export const ButtonContainer = styled.div`
     display: inline-block;
     width: ${(props)=>props.fullWidth===true ? '100%' : 'auto'};
     button{
+        width: ${(props)=>props.fullWidth===true ? '100%' : 'auto'};
         border-radius: 4px;
         padding: ${(props)=>props.isBig===true ? '12px 28px 12px 28px':'12px 20px 12px 20px'};
         height: ${(props)=>props.isBig===true ? '48px':'38px'};
         font-size:${(props)=>props.isBig===true ? '16px':'14px'};
-        width: ${(props)=>props.fullWidth===true ? '100%' : 'auto'};
         transition: 1s;
         border-width: 1.5px;
         border-style: solid;
@@ -63,6 +63,7 @@ export const ButtonContainer = styled.div`
         color: var(--whiteFixed);
         :hover{
             background-color: var(--brand4);
+            color: var(--grey0);
         }
     }
     .outline1{

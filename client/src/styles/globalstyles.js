@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     body{
         font-family: 'Inter', sans-serif;
         font-size: 16px;
+        background-color:var(--grey8);
+    }
+    p{
+        font-family: 'Inter', sans-serif;
     }
     button{
         cursor: pointer;
@@ -38,6 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Lexend', sans-serif;
         font-style: normal;
         color: var(--grey1);
+        padding: 0;
     }
     h1{
         font-size: 44px;
@@ -63,6 +68,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         font-size: 20px;
     }
+
     h7{
         font-weight: 600;
         font-size: 16px;

@@ -5,7 +5,7 @@ const Router = () => {
   return (
     <>
       <Routes>
-        <Route element={<PageProducts />} path="/home" />
+        <Route element={<PageProducts />} path="/" />
       </Routes>
     </>
   );
