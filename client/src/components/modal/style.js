@@ -11,7 +11,7 @@ export const ModalContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 19px;
+    padding: 40px 19px;
     overflow: auto;
     
     .modal-box{
