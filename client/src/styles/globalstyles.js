@@ -7,9 +7,17 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         font-family: 'Inter', sans-serif;
         font-size: 16px;
+        /* background-color:var(--grey8); */
+        background-color: #fff;
+    }
+    p{
+        font-family: 'Inter', sans-serif;
     }
     button{
         cursor: pointer;
@@ -18,7 +26,10 @@ export const GlobalStyle = createGlobalStyle`
     input, input::placeholder, label,textarea{
         font-family: 'Inter', sans-serif;
     }
-    label{
+    figcaption{
+        display: none;
+    }
+    label,span{
         font-weight: 500;
         font-size: 14px;
         color: var(--grey2);
@@ -32,6 +43,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Lexend', sans-serif;
         font-style: normal;
         color: var(--grey1);
+        padding: 0;
     }
     h1{
         font-size: 44px;
@@ -57,6 +69,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         font-size: 20px;
     }
+
     h7{
         font-weight: 600;
         font-size: 16px;

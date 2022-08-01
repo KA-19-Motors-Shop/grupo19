@@ -32,5 +32,6 @@ export const PHeader = styled.div`
 export const ButtonHeader = styled.div`
   display: flex;
   justify-content: center;
+  gap: 10px;
   width: 100%;
 `;

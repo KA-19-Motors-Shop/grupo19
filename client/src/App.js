@@ -1,4 +1,4 @@
-import { Input } from "./components/input";
+import Footer from "./components/footer";
 import Router from "./routes";
 import { GlobalStyle } from "./styles/globalstyles";
 
@@ -7,8 +7,7 @@ function App() {
     <>
       <GlobalStyle/>
       <Router/>
-      <Input label={'label'} placeholder={'placeholder'} name={'label'} type={'password'}/>
-      <Input label={'Textarea'} placeholder={'placeholder'} name={'label'} isTextarea={true}/>
+      <Footer/>
     </>
   );
 }
