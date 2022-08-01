@@ -20,15 +20,21 @@ const Header = () => {
           Leilão
         </Button>
       </HeaderDivButtons>
-      <HeaderDivLogin>
-        <Button className="negative" onClick={() => navigate("/login")}>
-          {" "}
-          Fazer login
-        </Button>
-        <Button className="light" onClick={() => navigate("/cadastro")}>
-          Cadastrar
-        </Button>
-      </HeaderDivLogin>
+      {localStorage.getItem("@Token") ? (
+        <HeaderDivLogin>
+          <p>nome do usuario</p>
+        </HeaderDivLogin>
+      ) : (
+        <HeaderDivLogin>
+          <Button className="negative" onClick={() => navigate("/login")}>
+            {" "}
+            Fazer login
+          </Button>
+          <Button className="light" onClick={() => navigate("/cadastro")}>
+            Cadastrar
+          </Button>
+        </HeaderDivLogin>
+      )}
     </HeaderStyled>
   );
 };
