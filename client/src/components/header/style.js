@@ -2,19 +2,22 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: var(--grey6);
+  img {
+    display: flex;
+    width: 153px;
+    height: 23px;
+  }
 `;
-export const HeaderLogo = styled.div`
-  display: flex;
-  width: 153px;
-  height: 23px;
-`;
+
 export const HeaderDivButtons = styled.div`
   display: flex;
+  justify-content: flex-end;
+  width: 50%;
 `;
 
 export const HeaderButtons = styled.button`

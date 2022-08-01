@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/button";
 import {
   HeaderStyled,
-  HeaderLogo,
   HeaderButtons,
   HeaderDivButtons,
   HeaderDivLogin,
@@ -14,14 +13,12 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <HeaderLogo className="logo">
-        <img src={logo} alt="logotipo kenzie motors" />
-      </HeaderLogo>
+      <img src={logo} alt="logotipo kenzie motors" />
+
       <HeaderDivButtons>
         <HeaderButtons onClick={() => navigate("/carros")}>
           Carros
         </HeaderButtons>
-
         <HeaderButtons onClick={() => navigate("/motos")}>Motos</HeaderButtons>
         <HeaderButtons onClick={() => navigate("/leilao")}>
           Leilão
