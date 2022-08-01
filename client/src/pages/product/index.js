@@ -1,6 +1,8 @@
 import Header from "../../components/header";
 import { SecundaryHeader } from "./style";
 import ContainerCards from "../../components/ContainerCards"; 
+
+
 import car1 from "../../assets/car1.png";
 import car2 from "../../assets/car2.png";
 import car3 from "../../assets/car3.png";
@@ -13,6 +15,7 @@ import car10 from "../../assets/car10.png";
 import car11 from "../../assets/car11.png";
 import car12 from "../../assets/car12.png";
 import Button from "../../components/button";
+import ContainerAuction from "../../components/containerAuction";
 
 
 const PageProducts = () => {
@@ -130,6 +133,42 @@ const PageProducts = () => {
     },
   ];
 
+  const arrayAuction = [
+    {
+      timer: "01:58:00",
+      img: car7,
+      title: "Mercedes Benz A 200 CGI ADVANCE SEDAN Mercedes",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...",
+      user: "Rodrigo Tavares",
+      KM: "0 KM",
+      year: "2013",
+      value: "R$ 78.500,00",
+    },
+    {
+      timer: "01:58:00",
+      img: car5,
+      title: "Mercedes Benz A 200 CGI ADVANCE SEDAN Mercedes",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...",
+      user: "Rodrigo Tavares",
+      KM: "0 KM",
+      year: "2013",
+      value: "R$ 78.500,00",
+    },
+    {
+      timer: "01:58:00",
+      img: car3,
+      title: "Mercedes Benz A 200 CGI ADVANCE SEDAN Mercedes",
+      details:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem...",
+      user: "Tiago",
+      KM: "0 KM",
+      year: "2013",
+      value: "R$ 78.500,00",
+    },
+  ]
+
   return (
     <>
       <Header />
@@ -145,7 +184,7 @@ const PageProducts = () => {
 
 
       </SecundaryHeader>
-
+      <ContainerAuction arrayTorender={arrayAuction}/>
       <ContainerCards arrayToRender={arrayCars} typeCard='Carros' />
       <ContainerCards arrayToRender={arrayCars} typeCard='Motos' />
     </>

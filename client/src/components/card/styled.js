@@ -80,3 +80,6 @@ export const Value = styled.p`
   font-weight:500;
   color:var(--grey1);
 `;
+
+
+
