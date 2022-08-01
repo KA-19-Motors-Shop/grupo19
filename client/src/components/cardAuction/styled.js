@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  position:relative;
+  position: relative;
   width: 292px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.29) 0%, #000000 100%);
   border-radius: 4px 4px 4px 4px;
-
-  margin-right:10px;
-  &:hover{
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.71) 0%, #000000 100%);
-
-
+  margin-right: 10px;
+  &:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.71) 0%, #000000 100%);
   }
 
   img {
@@ -19,41 +16,40 @@ export const Card = styled.div`
     object-fit: contain;
     width: 90%;
     z-index: -1;
-    padding-top:30px;
-    padding-left:5%;
+    padding-top: 30px;
+    padding-left: 5%;
   }
 
   button {
     display: flex;
     width: 100%;
-    justify-content:space-between;
-    padding-right:5%;
-    background-color:var(--brand1);
-    height:61px;
-    align-items:center;
-    border:none;
+    justify-content: space-between;
+    padding-right: 5%;
+    background-color: var(--brand1);
+    height: 61px;
+    align-items: center;
+    border: none;
     border-radius: 0px 0px 4px 4px;
 
-    p{
-      margin-left:5%;
-      font-size:16px;
-      color:var(--whiteFixed);
-      font-weight:600;
+    p {
+      margin-left: 5%;
+      font-size: 16px;
+      color: var(--whiteFixed);
+      font-weight: 600;
     }
-
-    
   }
-  button:hover{
-    background-color:var(--brand2);}
+  button:hover {
+    background-color: var(--brand2);
+  }
 
-  @media (min-width:768px){
-    width:700px;
+  @media (min-width: 768px) {
+    width: 700px;
 
-    img{
-      padding-top:0px;
-      width:auto;
+    img {
+      padding-top: 0px;
+      width: auto;
       transform: translateY(-20%);
-      left:10%;
+      left: 10%;
     }
   }
 `;
@@ -76,11 +72,9 @@ export const Hours = styled.div`
 `;
 
 export const InfoCard = styled.div`
-  
   width: 292px;
-  margin:auto;
-  padding:33px 0 0 20px;;
-
+  margin: auto;
+  padding: 33px 0 0 20px;
 
   h6 {
     font-family: "Lexend";
@@ -98,8 +92,8 @@ export const InfoCard = styled.div`
     margin-bottom: 25px;
   }
 
-  @media (min-width:768px){
-    width:700px;
+  @media (min-width: 768px) {
+    width: 700px;
   }
 `;
 

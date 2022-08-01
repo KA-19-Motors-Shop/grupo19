@@ -6,7 +6,7 @@ export const Main = styled.main`
 
   h5 {
     margin-top: 40px;
-    margin-bottom:37px;
+    margin-bottom: 37px;
     text-align: start;
   }
 
@@ -22,15 +22,14 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   overflow-x: auto;
 
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     height: 0px;
   }
 
   @media (min-width: 600px) {
-    padding-left:60px;
-    
+    padding-left: 60px;
   }
 `;
