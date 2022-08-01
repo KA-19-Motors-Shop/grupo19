@@ -1,4 +1,4 @@
-import { Card, BackGroundImg, DataUser, DataCar, Value } from "./styled";
+import { Card, BackGroundImg, DataCar, Value } from "./styled";
 import UserAdvertiser from "../userAdvertiser";
 
 const Cards = ({img, title, details, user, KM, year,value }) => {
