@@ -2,11 +2,16 @@ import UserAdvertiser from "../userAdvertiser";
 import { Card, DataCar, Details, Hours, InfoCard } from "./styled";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
+import car1 from "../../assets/car1.png";
+
+
 
 const CardAuction = ({ timer, img, title, details, user, year, KM, value }) => {
   return (
-    <Card>
-      <img src={img} alt="" />
+    <Card img={img}>
+      <img src={img} alt="Product Car" />
+      <div className="bg-image">
+
       <InfoCard>
         <Hours>
           <MdOutlineWatchLater color="#4529E6" size={28} />
@@ -33,6 +38,10 @@ const CardAuction = ({ timer, img, title, details, user, year, KM, value }) => {
         <p>Acessar página do leilão</p>
         <BsArrowRight color="#FFFFFF" size="25" />
       </button>
+
+
+      </div>
+
     </Card>
   );
 };
