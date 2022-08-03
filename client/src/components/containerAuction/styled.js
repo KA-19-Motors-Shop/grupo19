@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   max-width: 1482px;
-  margin: 100px auto 116px;
-
+  padding: 100px auto 116px;
+  margin: 0 auto;
   h5 {
-    margin-top: 40px;
+    padding-top: 40px;
     margin-bottom: 37px;
     text-align: start;
   }
@@ -15,7 +15,7 @@ export const Main = styled.main`
   }
   @media (min-width: 600px) {
     h5 {
-      padding: 0 0 0 60px;
+      padding: 100px 0 0 60px;
     }
   }
 `;

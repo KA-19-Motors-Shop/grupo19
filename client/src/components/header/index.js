@@ -49,7 +49,7 @@ const Header = () => {
         </HeaderDivLogin>
       ) : (
         <HeaderDivLogin>
-          <Button className="link" onClick={() => navigate("/login")}>
+          <Button style={{margin:'0 0 0 10px'}} className="link" onClick={() => navigate("/login")}>
             {" "}
             Fazer login
           </Button>

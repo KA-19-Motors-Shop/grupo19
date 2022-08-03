@@ -6,6 +6,7 @@ export const Card = styled.div`
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.29) 0%, #000000 100%);
   border-radius: 4px 4px 4px 4px;
   margin-right: 10px;
+  z-index: 10;
   &:hover {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.71) 0%, #000000 100%);
   }
@@ -15,11 +16,12 @@ export const Card = styled.div`
     display: flex;
     object-fit: contain;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: -1;
     padding-top: 30px;
     padding-left: 5%;
     object-fit: cover;
+    opacity: 0.4;
   }
 
   button {
