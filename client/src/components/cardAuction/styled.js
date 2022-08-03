@@ -45,7 +45,7 @@ export const Card = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 700px;
+    width: 735px;
 
     img {
       padding-top: 0px;
@@ -109,11 +109,20 @@ export const Details = styled.p`
 `;
 
 export const DataCar = styled.div`
-  display: flex;
-  align-items: center;
   position: relative;
+  padding: 0 24px 0 0px;
+  @media (min-width:768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .data_car_btn_section{
+    display: flex;
 
-  div {
+  }
+  .data_car_btn {
+    justify-content: space-between;
     display: flex;
     width: 51px;
     height: 32px;

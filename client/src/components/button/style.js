@@ -70,11 +70,13 @@ export const ButtonContainer = styled.div`
     color: var(--grey0);
     border-color: var(--grey0);
     background-color: transparent;
+
   }
   .outline2 {
     color: var(--grey0);
     border-color: var(--grey4);
     background-color: transparent;
+
   }
   .outlineBrand1 {
     color: var(--brand1);
