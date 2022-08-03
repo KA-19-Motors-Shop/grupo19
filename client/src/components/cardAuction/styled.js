@@ -14,10 +14,12 @@ export const Card = styled.div`
     position: absolute;
     display: flex;
     object-fit: contain;
-    width: 90%;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     padding-top: 30px;
     padding-left: 5%;
+    object-fit: cover;
   }
 
   button {
@@ -47,9 +49,10 @@ export const Card = styled.div`
 
     img {
       padding-top: 0px;
-      width: auto;
+      width: 100%;
+      height: 100%;
       transform: translateY(-20%);
-      left: 10%;
+      /* left: 10%; */
     }
   }
 `;

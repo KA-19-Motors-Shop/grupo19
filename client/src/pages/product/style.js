@@ -2,54 +2,41 @@ import styled from "styled-components";
 
 export const SecundaryHeader = styled.div`
   width: 100%;
-  padding: 80px 0px 160px;
+  height: 493px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(81, 38, 234, 1);
+`;
+export const H2Header = styled.div`
+  display: flex;
+  justify-content: center;
   text-align: center;
-  @media (max-width:740px) {
-    padding: 53px 0px 105px;
-
-  }
-  h1{
-    max-width: 748px;
-    width: 100%;
-    margin: 0 auto;
-    font-size:44px ;
-    line-height: 56px;
-    @media (max-width:740px) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-  }
-  @media (max-width:740px) {
-    .buttons{
-      flex-direction: column;
-      >div{
-        width: 100%;
-        button{
-          width: 100%;
-        }
-      }
-    }
-  }
-  .buttons{
-    display: flex;
-    padding: 0 12px 0 ;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    >div{
-      button{
-        padding: 24px 65px !important;
-      }
-    }
-  }
-
-  p{
-    margin: 20px auto 48px;
-    line-height: 28px;
-  }
-  h1,p {
-    text-align: center;
+  width: 748px;
+  height: 90px;
+  h2 {
     color: rgba(253, 253, 253, 1);
   }
+`;
+export const PHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  p {
+    padding: 50px 120px;
+    color: rgba(253, 253, 253, 1);
+  }
+`;
+export const ButtonHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  button{
+    height: 48px;
+    padding: 0px 65px;
+  }
+
 `;

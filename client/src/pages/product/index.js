@@ -1,8 +1,7 @@
 import Header from "../../components/header";
+import { H2Header, PHeader, ButtonHeader } from "./style";
 import { SecundaryHeader } from "./style";
-import ContainerCards from "../../components/ContainerCards"; 
-
-
+import ContainerCards from "../../components/ContainerCards";
 import car1 from "../../assets/car1.png";
 import car2 from "../../assets/car2.png";
 import car3 from "../../assets/car3.png";
@@ -17,9 +16,7 @@ import car12 from "../../assets/car12.png";
 import Button from "../../components/button";
 import ContainerAuction from "../../components/containerAuction";
 
-
 const PageProducts = () => {
-
   const arrayCars = [
     {
       img: car1,
@@ -171,18 +168,18 @@ const PageProducts = () => {
 
   return (
     <>
-      <Header />
       <SecundaryHeader>
-        <h1>Velocidade e experiência em um lugar feito para você</h1>
-        <p>Um ambiente feito para voce explorar o seu melhor</p>
-
-        <div className="buttons">
-          <Button isBig={true} className="outlineLight">Leilão</Button>
-          <Button isBig={true} className="outlineLight">Carros</Button>
-          <Button isBig={true} className="outlineLight">Motos</Button>
-        </div>
-
-
+        <H2Header>
+          <h2>Velocidade e experiência em um lugar feito para você</h2>
+        </H2Header>
+        <PHeader>
+          <p>Um ambiente feito para você explorar o seu melhor</p>
+        </PHeader>
+        <ButtonHeader>
+          <Button className="brand1">Leilão</Button>
+          <Button className="brand1">Carros</Button>
+          <Button className="brand1">Motos</Button>
+        </ButtonHeader>
       </SecundaryHeader>
       <ContainerAuction arrayTorender={arrayAuction}/>
       <ContainerCards arrayToRender={arrayCars} typeCard='Carros' />

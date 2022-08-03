@@ -14,7 +14,7 @@ const Login = ()=>{
                 <span className="forgot-password">
                     Esqueci minha senha
                 </span>
-                <Button isBig fullWidth={true} className="brand1" >Entrar</Button>
+                <Button isBig={true} fullWidth={true} className="brand1" >Entrar</Button>
                 <span className="dont-have-account">
                     Ainda não possui conta?
                 </span>
