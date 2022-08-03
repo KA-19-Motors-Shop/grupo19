@@ -13,24 +13,20 @@ const CardAuction = ({ timer, img, title, details, user, year, KM, value }) => {
           <p>{timer}</p>
         </Hours>
         <h6>{title}</h6>
-        <Details>
-          {details}
-        </Details>
-        <UserAdvertiser
-          userName={user}
-          color="blue"
-          isWhite={true}
-        />
+        <Details>{details}</Details>
+        <UserAdvertiser userName={user} color="blue" isWhite={true} />
         <DataCar>
-          <div>
-            <p>{year}</p>
+          <div className="data_car_btn_section">
+            <div className="data_car_btn">
+              <p>{year}</p>
+            </div>
+            <div className="data_car_btn">
+              <p>{KM}</p>
+            </div>
           </div>
-          <div>
-            <p>{KM}</p>
-          </div>
-        </DataCar>
 
-        <p className="Value">{value}</p>
+          <p className="Value">{value}</p>
+        </DataCar>
       </InfoCard>
 
       <button>
