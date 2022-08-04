@@ -1,11 +1,16 @@
 import Button from "../../components/button";
 import { Input } from "../../components/input";
+import { useModal } from "../../Providers/modalProviders";
 import { RegisterContainer } from "./style";
 
 const Register = () => {
+  const {openCloseAccountCreated} = useModal()
   return (
     <RegisterContainer>
-      <form className="register-box">
+      <form className="register-box" onSubmit={(e)=>{
+        e.preventDefault()
+        openCloseAccountCreated()
+      }}>
         <h5>Cadastro</h5>
         <span className="info">Informações pessoais</span>
         <Input label={"Nome"} placeholder={"Ex: Samuel Leão"} name={"name"} />

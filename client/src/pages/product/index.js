@@ -1,4 +1,3 @@
-import Header from "../../components/header";
 import { H2Header, PHeader, ButtonHeader } from "./style";
 import { SecundaryHeader } from "./style";
 import ContainerCards from "../../components/ContainerCards";

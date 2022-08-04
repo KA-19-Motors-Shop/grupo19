@@ -2,7 +2,6 @@ import UserAdvertiser from "../userAdvertiser";
 import { Card, DataCar, Details, Hours, InfoCard } from "./styled";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
-import car1 from "../../assets/car1.png";
 
 
 
