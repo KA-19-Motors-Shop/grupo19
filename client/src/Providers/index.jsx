@@ -1,6 +1,6 @@
 import { ModalProvider } from "./modalProviders"
 
-const Provider = ({children})=>{
+export const Provider = ({children})=>{
 
     return(
         <ModalProvider>
@@ -9,5 +9,6 @@ const Provider = ({children})=>{
     )
 }
 
-export default Provider
+
+
 
