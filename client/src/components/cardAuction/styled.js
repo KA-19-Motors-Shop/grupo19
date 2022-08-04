@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.div`
   position: relative;
   width: 292px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.29) 0%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, #000000 100%);
   border-radius: 4px 4px 4px 4px;
   margin-right: 10px;
   z-index: 10;
@@ -80,7 +80,7 @@ export const InfoCard = styled.div`
   width: 292px;
   margin: auto;
   padding: 33px 0 0 20px;
-
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.29) 0%, #000000 100%); */
   h6 {
     font-family: "Lexend";
     font-size: 18px;

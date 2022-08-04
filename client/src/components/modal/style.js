@@ -13,6 +13,7 @@ export const ModalContainer = styled.div`
     align-items: center;
     padding: 40px 19px;
     overflow: auto;
+    z-index: 30;
     
     .modal-box{
         max-height: 100%;

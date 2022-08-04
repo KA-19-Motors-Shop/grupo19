@@ -6,19 +6,21 @@ import { arrayAuction, arrayCars } from "../../arraysTest";
 
 
 const ProfilePageProduct = () => {
-  
   return (
+    <>
     <ProfileContainer>
       <AdvertiserProfileCard
         name={"Gabriel"}
         description={
           "lorem blabla bla bla lorem blabla bla bla lorem blabla bla bla lorem blabla bla bla "
         }
+        isMyAd={true}
       />
       <ContainerAuction arrayTorender={arrayAuction} />
-      <ContainerCards arrayToRender={arrayCars} typeCard="Carros" />
-      <ContainerCards arrayToRender={arrayCars} typeCard="Motos" />
+      <ContainerCards isMyAd arrayToRender={arrayCars} typeCard="Carros" />
+      <ContainerCards isMyAd arrayToRender={arrayCars} typeCard="Motos" />
     </ProfileContainer>
+    </>
   );
 };
 
