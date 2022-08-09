@@ -29,6 +29,7 @@ const Register = () => {
           label={"Data de Nascimento"}
           placeholder={"00/00/00"}
           name={"birthdate"}
+          type={"date"}
         />
         <Input
           label={"Descrição"}
