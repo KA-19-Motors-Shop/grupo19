@@ -33,7 +33,7 @@ export const InputContainer = styled.div`
         color: var(--grey1);
         padding: 0 16px;
         height: 48px;
-        line-height: 0;
+        line-height: 12px;
         border: 1.5px solid var(--grey7);
         background-color: transparent;
     }

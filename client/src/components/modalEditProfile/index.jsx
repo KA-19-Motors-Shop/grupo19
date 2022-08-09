@@ -17,7 +17,7 @@ const ModalEditProfile = () => {
             <Input label={"Email"} placeholder="Ex: samuel@gmail.com" name={"email"} />
             <Input label={"CPF"} placeholder="Ex: 000.000.000-00" name={"cpf"} />
             <Input label={"Celular"} placeholder="Ex: (00)99999-9999" name={"tel"} />
-            <Input label={"Data de nascimento"} placeholder="Ex: 09/12/1999" name={"birth_date"} />
+            <Input type={"date"} label={"Data de nascimento"} placeholder="Ex: 09/12/1999" name={"birth_date"} />
             <Input isTextarea label={"Descrição"} placeholder="Ex: Insira a descrição" name={"description"} />
             
             
