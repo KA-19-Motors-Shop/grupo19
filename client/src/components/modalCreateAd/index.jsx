@@ -139,16 +139,15 @@ const ModalCreateAd = () => {
             name={"imgGallery"}
           />
 
-          <Button style={{ margin: "20px 0px 0 0" }} className="brandOpacity">
+          <Button style={{ margin: "20px 0px 0 0" , width:'100%', maxWidth:"320px"}} className="brandOpacity text-overflow">
             Adicionar campo para imagem de galeria
           </Button>
 
-          <div style={{ textAlign: "end", margin: "24px 0 0 0" }}>
+          <div style={{ textAlign: "end", margin: "24px 0 0 0", display:'flex', flexWrap:"wrap", gap:"10px" }}>
             <Button
               onClick={openCloseCreateAd}
               isBig
               className="negative"
-              style={{ margin: "0 10px 0 0" }}
             >
               Cancelar
             </Button>

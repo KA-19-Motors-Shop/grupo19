@@ -35,7 +35,7 @@ export const BackGroundImg = styled.div`
   display: flex;
   border: 2px solid  var(--grey7);
   border-radius:4px;
-
+  cursor: pointer;
   &:hover{
     border: 2px solid var(--brand1);
   }

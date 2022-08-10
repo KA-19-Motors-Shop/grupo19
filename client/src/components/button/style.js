@@ -5,8 +5,7 @@ export const ButtonContainer = styled.div`
   width: ${(props) => (props.fullWidth === true ? "100%" : "auto")};
   button {
     border-radius: 4px;
-    padding: ${(props) =>
-    props.isBig === true ? "12px 28px 12px 28px" : "12px 20px 12px 20px"};
+    padding: ${(props) =>props.isBig === true ? "12px 28px 12px 28px" : "12px 20px 12px 20px"};
     height: ${(props) => (props.isBig === true ? "48px" : "38px")};
     font-size: ${(props) => (props.isBig === true ? "16px" : "14px")};
     width: ${(props) => (props.fullWidth === true ? "100%" : "auto")};
@@ -15,6 +14,21 @@ export const ButtonContainer = styled.div`
     border-style: solid;
     font-weight: 600;
     line-height: 0;
+
+  }
+  button.text-overflow{
+    @media (max-width: 508px) {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+  .flex1{
+    @media (max-width: 508px) {
+      flex: 1;
+      width: 100%;
+    }
   }
   :hover {
     transition: 1s;

@@ -24,11 +24,11 @@ const ModalExcludeAd = () => {
               Essa ação não pode ser desfeita. Isso excluirá permanentemente sua
               conta e removerá seus dados de nossos servidores.
             </p>
-            <div style={{ textAlign: "end", margin: "24px 0 0 0" }}>
+            <div style={{ textAlign: "end", margin: "24px 0 0 0", display:'flex', flexWrap:"wrap", gap:"10px"}}>
               <Button
                 isBig
                 className="negative"
-                style={{ margin: "0 10px 0 0" }}
+                // style={{ margin: "0 10px 0 0" }}
                 onClick={openCloseModalExcludeAd}
               >
                 Cancelar
