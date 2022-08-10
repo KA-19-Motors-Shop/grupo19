@@ -11,7 +11,7 @@ export const HeaderStyled = styled.header`
   z-index: 20;
   position: sticky;
   top: 0;
-  .container{
+  .container {
     padding: 0 20px 0 30px;
     display: flex;
     align-items: center;
@@ -19,13 +19,40 @@ export const HeaderStyled = styled.header`
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-
   }
   img {
     display: flex;
     width: 153px;
     cursor: pointer;
     height: 23px;
+  }
+  .user-icon-mobile {
+    position: relative;
+  }
+  .menu-drop-down-user:hover .login-box-user{
+    display:initial
+  }
+
+  .login-box-user {
+    padding: 0px 10px 0px 22px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+    background-color: var(--grey9);
+    width: 100%;
+    position: absolute;
+    bottom: -190px;
+    display: none;
+    left: 0;
+    > div {
+      margin: 16px 0;
+      color: var(--grey2);
+      font-size: 16px;
+      line-height: 28px;
+      cursor: pointer;
+      :hover {
+        color: var(--brand1);
+      }
+    }
   }
 `;
 export const HeaderDivButtons = styled.div`
@@ -52,11 +79,11 @@ export const HeaderDivLogin = styled.div`
   padding: 0 16px 0 0px;
   gap: 10px;
   position: relative;
-  :hover .login-box-user{
+  :hover .login-box-user {
     display: initial;
   }
-  .login-box-user{
-    padding: 0px 10px 0px 22px ;
+  .login-box-user {
+    padding: 0px 10px 0px 22px;
     border-radius: 4px;
     box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
     background-color: var(--grey9);
@@ -65,13 +92,13 @@ export const HeaderDivLogin = styled.div`
     top: 60px;
     display: none;
     right: 0;
-    >div{
+    > div {
       margin: 16px 0;
       color: var(--grey2);
       font-size: 16px;
       line-height: 28px;
       cursor: pointer;
-      :hover{
+      :hover {
         color: var(--brand1);
       }
     }
@@ -102,14 +129,14 @@ export const HeaderBurgerMenu = styled.div`
       cursor: pointer;
     }
   }
-  .drop-down-menu-btn{
-    padding:0 16px;
+  .drop-down-menu-btn {
+    padding: 0 16px;
     height: 236px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .menu-drop-down-user{
+  .menu-drop-down-user {
     padding: 2px 10px;
     border-top: 2px solid var(--grey4);
   }
@@ -121,7 +148,7 @@ export const HeaderBurgerMenu = styled.div`
     top: 69px;
     border-top: 1px solid var(--grey4);
     transition: 1s all;
-    left: ${(props)=>props.openDropDownMenu ? '0': '100%'};
+    left: ${(props) => (props.openDropDownMenu ? "0" : "100%")};
     width: 100%;
     button.link {
       color: var(--grey2);
@@ -138,7 +165,7 @@ export const HeaderBurgerMenu = styled.div`
       text-align: start;
     }
   }
-  .drop-down-menu-login{
+  .drop-down-menu-login {
     height: 184px;
     display: flex;
     flex-direction: column;

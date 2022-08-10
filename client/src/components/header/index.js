@@ -35,7 +35,11 @@ const Header = () => {
           <img
             src={logo}
             alt="logotipo kenzie motors"
-            onClick={() => navigate("/")}
+            onClick={() =>{
+              navigate("/")
+              window.scrollTo(0,0)
+              setOpenDropDownMenu(false)
+            }}
           />
           <HeaderDivButtons>
             <Button className="link" onClick={() => navigate("/carros")}>
@@ -58,6 +62,7 @@ const Header = () => {
                 <div
                   onClick={() => {
                     localStorage.clear();
+                    window.scrollTo(0,0)
                     navigate("/");
                   }}
                 >
@@ -114,14 +119,32 @@ const Header = () => {
 
               {localStorage.getItem("@Token") ? (
                 <div className="menu-drop-down-user">
-                  <UserAdvertiser userName={"Gabriel"} color={"blue"} />
+                  <UserAdvertiser className="user-icon-mobile" userName={"Gabriel"} color={"blue"} />
+                  <div className="login-box-user">
+                    <div onClick={openCloseEditProfile}>Editar Perfil</div>
+                    <div onClick={openCloseEditAddress}>Editar Endereço</div>
+                    <div>Minhas Compras</div>
+                    <div
+                      onClick={() => {
+                        localStorage.clear();
+                        window.scrollTo(0,0)
+                        navigate("/");
+                      }}
+                    >
+                      Sair
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <div className="drop-down-menu-login">
                   <Button
                     fullWidth={true}
                     className="link"
-                    onClick={() => navigate("/leilao")}
+                    onClick={() =>{
+                      navigate("/login")
+                      window.scrollTo(0,0)
+                      setOpenDropDownMenu(false)
+                    }}
                   >
                     Login
                   </Button>
@@ -130,7 +153,11 @@ const Header = () => {
                     isBig
                     fullWidth={true}
                     className="outline1"
-                    onClick={() => navigate("/leilao")}
+                    onClick={() =>{
+                      navigate("/cadastro")
+                      window.scrollTo(0,0)
+                      setOpenDropDownMenu(false)
+                    }}
                   >
                     Cadastro
                   </Button>

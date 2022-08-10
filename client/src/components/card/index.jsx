@@ -2,13 +2,18 @@ import { Card, BackGroundImg, DataCar, Value } from "./styled";
 import UserAdvertiser from "../userAdvertiser";
 import Button from "../button";
 import { useModal } from "../../Providers/modalProviders";
+import { useNavigate } from "react-router-dom";
 
 const Cards = ({ img, title, details, user, KM, year, value, isMyAd }) => {
   const {  openCloseEditAd } = useModal();
+  const navigate = useNavigate()
   return (
       <Card>
         <BackGroundImg>
-          <img src={img} alt="" draggable={false} />
+          <img src={img} alt="" draggable={false}  onClick={()=>{
+            window.scrollTo(0,0)
+            navigate("/product-page/2")
+          }} />
         </BackGroundImg>
 
         <h3>{title}</h3>

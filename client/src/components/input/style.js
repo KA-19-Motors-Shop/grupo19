@@ -36,7 +36,7 @@ export const InputContainer = styled.div`
     top: 16px;
     right: 0;
     color: var(--whiteFixed);
-    font-size: 0.45rem;
+    font-size: 0.6rem;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ export const InputContainer = styled.div`
     background: var(--alert1);
     animation: fadeUp 500ms;
     svg {
-      font-size: 12px;
+      font-size: 14px;
     }
     ::after {
       background: var(--alert1);

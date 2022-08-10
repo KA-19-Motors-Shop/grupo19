@@ -39,6 +39,11 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         color: var(--grey2);
     }
+    .size-btn-adjust{
+        @media (max-width:400px) {
+            font-size: 11px;
+        }
+    }
     h1,h2,h3,h4,h5,h6{
         font-family: 'Lexend', sans-serif;
         font-style: normal;

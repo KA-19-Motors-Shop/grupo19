@@ -1,10 +1,10 @@
 import { UserAdvertiserContainer } from "./style"
 
 
-const UserAdvertiser = ({userName, color, isWhite=false})=>{
+const UserAdvertiser = ({userName, color, isWhite=false, ...rest})=>{
     userName = userName.split(' ').filter(word=>word.length).join(' ')
     return(
-        <UserAdvertiserContainer color={color} isWhite={isWhite}>
+        <UserAdvertiserContainer {...rest} color={color} isWhite={isWhite}>
             <div className="circle">
                 {userName.split(' ').reduce((acc, letter)=>acc+letter.toUpperCase()[0],'').slice(0,2)}
             </div>

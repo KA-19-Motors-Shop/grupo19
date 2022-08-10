@@ -186,7 +186,13 @@ const ModalEditAd = () => {
             error={errors?.img}
           />
 
-          <Button style={{ margin: "20px 0px 0 0" }} className="brandOpacity">
+          <Button 
+            style={{ 
+              margin: "20px 0px 0 0",
+              width:'100%',
+              maxWidth:"320px",
+            }} 
+            className="brandOpacity text-overflow">
             Adicionar campo para imagem de galeria
           </Button>
 
@@ -196,6 +202,7 @@ const ModalEditAd = () => {
               margin: "24px 0 0 0",
               display: "flex",
               gap: "10px",
+              flexWrap:"wrap"
             }}
           >
             <Button
@@ -204,12 +211,15 @@ const ModalEditAd = () => {
                 openCloseModalExcludeAd();
               }}
               isBig
-              className="negative"
-              style={{ flex: "1" }}
+              className="negative text-overflow"
+              style={{ 
+                flex: "1",
+                minWidth:'178px'
+              }}
             >
               Excluir Anúncio
             </Button>
-            <Button isBig className="brandDisable">
+            <Button isBig className="brandDisable text-overflow flex1">
               Salvar Alterações
             </Button>
           </div>

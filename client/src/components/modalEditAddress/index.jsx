@@ -101,8 +101,8 @@ const ModalEditAddress = () => {
               <Input type={"number"} register={register} error={errors?.number} label={"Número"} placeholder="Ex: 1029" name={"number"} />
               <Input register={register} error={errors?.complement} label={"Complemento"} placeholder="Ex: Casa" name={"complement"} />
             </div>
-            <div style={{textAlign:'end', margin:'24px 0 0 0'}}>
-                <Button onClick={openCloseEditAddress} isBig className="negative" style={{margin:'0 10px 0 0'}}>Cancelar</Button>
+            <div style={{textAlign:'end', margin:'24px 0 0 0', display:'flex', flexWrap:"wrap", gap:"10px"}}>
+                <Button onClick={openCloseEditAddress} isBig className="negative">Cancelar</Button>
                 <Button isBig className="brandDisable">Salvar alterações</Button>
             </div>
           </form>
