@@ -1,28 +1,45 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
+import { Entity, Column, PrimaryColumn, OneToMany } from "typeorm";
 import { v4 as uuid } from "uuid";
+import { Ad } from "./ad.entity";
+import { Lances } from "./lances.entity";
 
 @Entity()
 export class User {
   @PrimaryColumn("uuid")
   readonly id: string;
 
-  @Column()
+  @Column({ nullable: false })
   name: string;
 
-  @Column({ nullable: true })
+  @Column({ nullable: false, unique: true })
   email: string;
+
+  @Column()
+  cpf: string;
+
+  @Column()
+  cel: string;
+
+  @Column()
+  birthDate: string;
+
+  @Column()
+  description: string;
 
   @Column()
   password: string;
 
   @Column()
-  age: number;
+  isBuyer: boolean;
 
-  @Column({ default: "now()" })
-  created_at: Date;
+  @Column()
+  isAdvertiser: boolean;
 
-  @Column({ default: "now()" })
-  updated_at: Date;
+  @OneToMany(() => Ad, (ad) => ad.id)
+  ad: Ad;
+
+  @OneToMany(() => Lances, (lances) => lances.id)
+  lances: Lances;
 
   constructor() {
     if (!this.id) {
