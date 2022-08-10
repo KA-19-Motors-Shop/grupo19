@@ -27,7 +27,6 @@ export const LoginContainer = styled.main`
     }
     span{
         display: block;
-
     }
     .forgot-password{
         color: var(--grey2);
@@ -36,9 +35,11 @@ export const LoginContainer = styled.main`
         font-weight: 500;
         text-align: end;
         margin: 9px 0 21px;
+        cursor: pointer;
     }
     .dont-have-account{
         text-align: center;
+        cursor: pointer;
         margin: 24px auto;
         font-weight: 400;
         font-size: 14px;
