@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { brazillianUFs, testBirthdate, testCep } from "../../utils";
+import {Navigate} from 'react-router-dom'
 
 
 const Register = () => {
@@ -48,6 +49,10 @@ const Register = () => {
     console.log({...data, isBuyer, isAdvertiser});
     openCloseAccountCreated();
   };
+
+  if(localStorage.getItem("@Token")){
+    return Navigate({to:"/"})
+  }
 
   return (
     <RegisterContainer>
