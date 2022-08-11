@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import Button from "../../components/button";
 import { Input } from "../../components/input";
 import { LoginContainer } from "./style";
@@ -24,6 +24,10 @@ const Login = () => {
 
 
   const navigate = useNavigate();
+
+  if(localStorage.getItem("@Token")){
+    return Navigate({to:"/"})
+  }
   return (
     <LoginContainer>
       <form onSubmit={handleSubmit(submitLogin)} className="login-box">
