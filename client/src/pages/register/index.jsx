@@ -6,42 +6,11 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
-import axios from "axios";
+import { brazillianUFs, testBirthdate, testCep } from "../../utils";
+
 
 const Register = () => {
   const { openCloseAccountCreated } = useModal();
-
-  const brazillianUFs = [
-    "AC",
-    "Al",
-    "AP",
-    "AM",
-    "BA",
-    "CE",
-    "DF",
-    "ES",
-    "GO",
-    "MA",
-    "MT",
-    "MS",
-    "MG",
-    "PA",
-    "PB",
-    "PR",
-    "PE",
-    "PI",
-    "RJ",
-    "RN",
-    "RS",
-    "RO",
-    "RR",
-    "SC",
-    "SP",
-    "SE",
-    "TO",
-  ];
-
-
 
   const schema = yup.object().shape({
     name: yup.string().required("Campo obrigatório"),
@@ -50,38 +19,12 @@ const Register = () => {
     cel: yup.string().required("Campo obrigatório").min(13, "Número inválido"),
     birthdate: yup.string().required("Campo obrigatório")
     .length(10, "Data inválida")
-    .test("test-birthdate", "Você precisa ser maior de idade",
-    (value)=>{
-      const [year, month, day] = value.split('-')
-      const now = new Date()
-      const birthYear = Number(year)
-      const birthMonth = Number(month)
-      const birthDay = Number(day)
-      const nowDay = now.getDate()
-      const nowMonth = now.getMonth() + 1
-      const nowYear = now.getFullYear()
-      if((nowYear-birthYear) > 18) return true
-      if((nowYear-birthYear) === 18 && birthMonth < nowMonth) return true 
-      if((nowYear-birthYear) === 18 && birthMonth === nowMonth && birthDay <= nowDay) return true 
-      return false
-    }),
+    .test("test-birthdate", "Você precisa ser maior de idade", testBirthdate),
     description: yup.string().required("Campo obrigatório"),
-    cep: yup.string().required("Campo obrigatório").length(9,'Cep inválido').test("test-cep", "Esse CEP não existe", 
-    async (value)=>{
-      let cepValid = false
-      if(value.length===9){
-        
-        const baseUrlCep = `https://viacep.com.br/ws/${value.replace('-', '')}/json/`
-
-        await axios.get(baseUrlCep).then(res=>{
-          const data =  res.data?.erro
-          if(!data) cepValid=true
-        }).catch(err=>console.log(err))
-        return cepValid
-      }
-      return false
-      
-    }),
+    cep: yup.string()
+    .required("Campo obrigatório")
+    .length(9,'Cep inválido')
+    .test("test-cep", "Esse CEP não existe", testCep),
     state: yup.string().required("Campo obrigatório").test("test-state", "Esse estado não existe",
     (value)=> brazillianUFs.includes(value.toUpperCase()) ),
     street: yup.string().required("Campo obrigatório"),
@@ -176,6 +119,7 @@ const Register = () => {
             placeholder={"Digitar estado"}
             name={"state"}
             error={errors?.state}
+            id="uf"
           />
           <Input
             register={register}
@@ -183,6 +127,7 @@ const Register = () => {
             placeholder={"Digitar cidade"}
             name={"city"}
             error={errors?.city}
+            id="city"
           />
         </div>
 
@@ -192,6 +137,16 @@ const Register = () => {
           placeholder={"Digite a rua"}
           name={"street"}
           error={errors?.street}
+          id="street"
+        />
+
+        <Input
+          register={register}
+          label={"Bairro"}
+          placeholder={"Digite o Bairro"}
+          name={"neighborhood"}
+          error={errors?.street}
+          id="neighborhood"
         />
 
         <div className="two-columns" style={{ display: "flex", gap: "10px" }}>
@@ -209,6 +164,7 @@ const Register = () => {
             placeholder={"Ex: apart 307"}
             name={"complement"}
             error={errors?.complement}
+            id="complement"
           />
         </div>
 

@@ -1,6 +1,9 @@
 import { InputContainer } from "./style";
 import InputMask from "react-input-mask";
 import { FiAlertCircle } from "react-icons/fi";
+import { cepMask, cpfMask, telMask } from "../../masks";
+import { getAddressInfo } from "../../utils";
+
 
 export const Input = ({
   label,
@@ -23,40 +26,50 @@ export const Input = ({
             {...rest}
           />
         ) : name === "tel" || name === "cel" ? (
-          <InputMask
+
+          <input
             {...register(name)}
-            mask="(99)99999-9999"
-            maskChar=""
             placeholder={placeholder}
             name={name}
             {...rest}
+            id='tel'
+            onInput = {(e)=>{
+              document.getElementById('tel').value = telMask(document.getElementById('tel').value)
+            }}
           />
+
         ) : name === "cpf" ? (
-          <InputMask
+
+          <input
             {...register(name)}
-            mask="999.999.999-99"
-            maskChar=""
             placeholder={placeholder}
             name={name}
             {...rest}
+            id='cpf'
+            onInput = {(e)=>{
+              document.getElementById('cpf').value = cpfMask(document.getElementById('cpf').value)
+            }}
           />
         ) : name === "cep" ? (
-          <InputMask
+
+          <input
             {...register(name)}
-            mask="99999-999"
-            maskChar=""
             placeholder={placeholder}
             name={name}
             {...rest}
+            id='cep'
+            onInput = {(e)=>{
+              document.getElementById('cep').value = cepMask(document.getElementById('cep').value)
+              getAddressInfo(e)
+            }}
           />
         ) : name === "state" ? (
-          <InputMask
+          <input
             {...register(name)}
-            mask="aa"
-            className="uppercase"
-            maskChar=""
             placeholder={placeholder}
             name={name}
+            maxLength='2'
+            className="uppercase"
             {...rest}
           />
         ) : (
@@ -69,30 +82,6 @@ export const Input = ({
         )
       ) : isTextarea ? (
         <textarea placeholder={placeholder} name={name} {...rest} />
-      ) : name === "tel" || name === "cel" ? (
-        <InputMask
-          mask="(99)99999-9999"
-          maskChar=""
-          placeholder={placeholder}
-          name={name}
-          {...rest}
-        />
-      ) : name === "cpf" ? (
-        <InputMask
-          mask="999.999.999-99"
-          maskChar=""
-          placeholder={placeholder}
-          name={name}
-          {...rest}
-        />
-      ) : name === "cep" ? (
-        <InputMask
-          mask="99999.999"
-          maskChar=""
-          placeholder={placeholder}
-          name={name}
-          {...rest}
-        />
       ) : (
         <input placeholder={placeholder} name={name} {...rest} />
       )}
