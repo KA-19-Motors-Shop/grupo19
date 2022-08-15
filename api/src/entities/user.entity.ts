@@ -8,10 +8,10 @@ export class User {
   @PrimaryColumn("uuid")
   readonly id: string;
 
-  @Column({ nullable: false })
+  @Column()
   name: string;
 
-  @Column({ nullable: false, unique: true })
+  @Column({ unique: true })
   email: string;
 
   @Column()
@@ -34,6 +34,24 @@ export class User {
 
   @Column()
   isAdvertiser: boolean;
+
+  @Column()
+  street: string;
+
+  @Column()
+  number: number;
+
+  @Column()
+  cep: number;
+
+  @Column()
+  state: string;
+
+  @Column()
+  city: string;
+
+  @Column()
+  complement: string;
 
   @OneToMany(() => Ad, (ad) => ad.id)
   ad: Ad;
