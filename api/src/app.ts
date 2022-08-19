@@ -1,16 +1,18 @@
 import express from "express";
 import dotenv from "dotenv";
+import ErrorMiddlewares from "./middlewares/error.middlewares";
 
+//import routes from "./routes"
 dotenv.config();
 
 const app = express();
 
-const PORT = 4000;
+app.use(express.json());
 
-app.get("/", (req, res) => res.send("Olá mundo"));
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+//app.use(routes);
+app.use(ErrorMiddlewares);
 
-app.listen(PORT, () =>
-  console.log(
-    `Rodando em http://localhost:${PORT}/ ${process.env.POSTGRES_USER || ''}`
-  )
-);
+export default app;
