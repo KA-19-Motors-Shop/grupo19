@@ -17,10 +17,10 @@ export class Ad {
   year: string;
 
   @Column()
-  quilometer: number;
+  quilometer: string;
 
   @Column()
-  price: number;
+  price: string;
 
   @Column()
   details: string;
@@ -31,11 +31,14 @@ export class Ad {
   @Column()
   type_vehicule: string;
 
+  @Column("varchar", { array: true })
+  url: string[];
+
   @Column()
   cover_img: string;
 
   @ManyToOne(() => User, (user) => user.id, { eager: true })
-  user: User;
+  user: string;
 
   constructor() {
     if (!this.id) {
