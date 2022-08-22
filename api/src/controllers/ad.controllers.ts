@@ -5,9 +5,37 @@ import deleteAdService from "@services/ad/adDelete.service";
 import updateAdService from "@services/ad/adUpdate.service";
 
 export default class AdController {
-  // static async store(req: Request, res: Response) {
-  //   const {}}
+  static async store(req: Request, res: Response) {
+    const {
+      type,
+      title_car,
+      year,
+      quilometer,
+      price,
+      userId,
+      details,
+      show_ad,
+      type_vehicule,
+      cover_img,
+      url,
+    } = req.body;
 
+    const user = await createAdService({
+      type,
+      title_car,
+      year,
+      quilometer,
+      price,
+      userId,
+      details,
+      show_ad,
+      type_vehicule,
+      cover_img,
+      url,
+    });
+
+    return res.status(201).json(user);
+  }
   static async index(req: Request, res: Response) {
     const ad = await listAdService();
 
