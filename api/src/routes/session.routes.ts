@@ -12,3 +12,4 @@ sessionRouter.post(
   expressYupMiddleware({ schemaValidator: loginValidation }),
   SessionController.store
 );
+export default sessionRouter;

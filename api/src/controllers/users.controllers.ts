@@ -22,7 +22,7 @@ export default class UserController {
       isAdvertiser,
       isBuyer,
       password,
-    } = req.validCreateUser;
+    } = req.body;
 
     const user = await createUserService({
       id,
