@@ -1,7 +1,7 @@
-import { AppDataSource } from "src/data-source";
-import { User } from "src/entities/user.entity";
-import AppError from "src/errors/AppError";
-import { IUserLogin } from "src/interfaces/user.interfaces";
+import { AppDataSource } from "../../data-source";
+import { User } from "../../entities/user.entity";
+import AppError from "../../errors/AppError";
+import { IUserLogin } from "../../interfaces/user.interfaces";
 
 import * as bcrypt from "bcryptjs";
 import * as jwt from "jsonwebtoken";

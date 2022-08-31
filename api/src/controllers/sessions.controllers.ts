@@ -1,4 +1,4 @@
-import sessionLoginService from "@services/sessions/sessionLogin.service";
+import sessionLoginService from "../services/sessions/sessionLogin.service";
 import { instanceToPlain } from "class-transformer";
 import { Request, Response } from "express";
 

@@ -14,3 +14,8 @@ export interface IAdCreate {
 export interface IAdID {
   id: string;
 }
+
+export interface AdActivateDeactivate {
+  user_id: string;
+  ad_id: string;
+}
